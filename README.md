@@ -2,7 +2,11 @@
 
 Lift inline anonymous objects on `style` and `css` values to the module's scope. This will benefit a component that will be rendered multiple times as it prevents a new anonymous object being created on every render.
 
-Taking suggestions for a name too :)
+Taking suggestions for a name too 🌚
+
+## Disclaimer
+
+This was written just to learn how to create a babel plugin, I wouldn't recommend using it 👻
 
 ## Example
 
