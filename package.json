@@ -1,0 +1,17 @@
+{
+  "name": "babel-plugin-react-move-anonymous-inline-style-objects",
+  "version": "1.0.0",
+  "description": "Moves inline anonymous objects from css and style props to the modules scope",
+  "main": "index.js",
+  "keywords": [],
+  "author": "bitttttten <bitttttten@googlemail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-react": "^7.10.4",
+    "babel-plugin-tester": "^9.2.0",
+    "jest": "^26.4.2"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

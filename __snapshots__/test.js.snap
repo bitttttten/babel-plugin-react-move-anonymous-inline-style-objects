@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-move-anonymous-inline-style-objects 1. react-move-anonymous-inline-style-objects: 1. react-move-anonymous-inline-style-objects 1`] = `
+
+import React from "react";
+
+export const MComponent = () => {
+    const myValue = 0.3;
+    return (
+        <div
+            css={{
+                color: "red",
+                margin: \`\${myValue > 0.5 ? 10 : 20}px\`,
+            }}
+            style={{
+                padding: 10,
+                backgroundColor: "yellow",
+            }}
+            untouched
+        >
+            Text
+        </div>
+    );
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+var bpmio__style__0 = {
+  padding: 10,
+  backgroundColor: "yellow",
+};
+export const MComponent = () => {
+  const myValue = 0.3;
+  return /*#__PURE__*/ React.createElement(
+    "div",
+    {
+      css: {
+        color: "red",
+        margin: \`\${myValue > 0.5 ? 10 : 20}px\`,
+      },
+      style: bpmio__style__0,
+      untouched: true,
+    },
+    "Text"
+  );
+};
+
+
+`;
+
+exports[`react-move-anonymous-inline-style-objects 2. react-move-anonymous-inline-style-objects: 2. react-move-anonymous-inline-style-objects 1`] = `
+
+import React from "react";
+import SomeComponent from "react-library";
+
+export const MComponent = () => {
+    const fn = () => alert('hey there');
+    return (
+        <SomeComponent
+            css={{
+                color: "red",
+            }}
+            style={{
+                padding: 10,
+                backgroundColor: "yellow",
+            }}
+            isActive
+            onPress={fn}
+        >
+            Text
+        </SomeComponent>
+    );
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+import SomeComponent from "react-library";
+var bpmio__style__2 = {
+  padding: 10,
+  backgroundColor: "yellow",
+};
+var bpmio__css__1 = {
+  color: "red",
+};
+export const MComponent = () => {
+  const fn = () => alert("hey there");
+
+  return /*#__PURE__*/ React.createElement(
+    SomeComponent,
+    {
+      css: bpmio__css__1,
+      style: bpmio__style__2,
+      isActive: true,
+      onPress: fn,
+    },
+    "Text"
+  );
+};
+
+
+`;
+
+exports[`react-move-anonymous-inline-style-objects 3. react-move-anonymous-inline-style-objects: 3. react-move-anonymous-inline-style-objects 1`] = `
+
+import React from "react";
+
+const displayNewStyles = true;
+
+export const MComponent = () => {
+    return (
+        <div
+            css={{
+                color: "red",
+                backgroundColor: displayNewStyles ? "orange" : "transparent",
+            }}
+        >
+            Text
+        </div>
+    );
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const displayNewStyles = true;
+export const MComponent = () => {
+  return /*#__PURE__*/ React.createElement(
+    "div",
+    {
+      css: {
+        color: "red",
+        backgroundColor: displayNewStyles ? "orange" : "transparent",
+      },
+    },
+    "Text"
+  );
+};
+
+
+`;
