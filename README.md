@@ -1,6 +1,6 @@
 # babel-plugin-react-move-anonymous-inline-style-objects
 
-Lift inline anonymous objects on `style` and `css` values to the module's scope. This will benefit a component that will be rendered multiple times as it prevents a new anonymous object being created on every render.
+Lift inline anonymous objects on `style` and `css` props in JSX outside of the render's scope. This will benefit a component that will be rendered multiple times as it prevents a new anonymous object being created on every render.
 
 Taking suggestions for a name too 🌚
 
