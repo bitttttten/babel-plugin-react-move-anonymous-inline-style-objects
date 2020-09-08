@@ -9,20 +9,19 @@ Taking suggestions for a name too :)
 **In**
 
 ```js
-import React from "react";
+import React from "react"
 
-const MyComponent = () => <div style={{ color: `red` }}>
-};
+const MyComponent = () => <div style={{ color: "red" }}>
 ```
 
 **Out**
 
 ```js
-import React from "react";
+import React from "react"
 
 var bpmio__style__0 = {
   color: "red",
-};
+}
 
 const MyComponent = () => <div style={bpmio__style__0}>
 ```
